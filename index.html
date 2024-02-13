@@ -1,0 +1,39 @@
+<!DOCTYPE html
+<html lang = "en">
+
+<head>
+    <meta charset="UTF-8">    <meta name="port" content="=device-width initial-scale=.0">
+ <title>I LOVE YOU</title>
+ <link rel="icon" href ="..\images\download.png">
+    <link rel="stylesheet" href="Style.css">
+    <!-- Add the slick-theme.css to get defasult styling -->
+</head>
+<body>
+    <script>
+        var yesButton, noButton;
+        function changeButton() {
+            if (!yesButton) {
+                yesButton = document.querySelector('.animate-button:first-child');
+                noButton = document.querySelector('.animate-button:last-child');
+                yesButton.style.width = '250px';
+                yesButton.style.height = '100px';
+            }
+            yesButton.style.width = (parseInt(yesButton.style.width) + 10) + 'px';
+            yesButton.style.height = (parseInt(yesButton.style.height) + 5) + 'px';
+            yesButton.textContent = 'Please say yes 😢';
+        }
+
+        function navigateToNewPage() {
+            window.location.href = 'Happy Valentine.html';
+        }
+    </script>
+    <div>
+        <h1 class="animate-title">WILL YOU BE MY VALENTINE?</h1>
+        <p></p>
+        <div class="button-container">
+            <button class="animate-button" onclick="navigateToNewPage()">Yes</button>
+            <button class="animate-button" onclick="changeButton()">No</button>
+        </div>
+    </div>
+</body>
+</html>
